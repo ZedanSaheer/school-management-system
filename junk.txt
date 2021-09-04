@@ -1,0 +1,39 @@
+    public static void showMenuFromMainMenu() {
+        Scanner sc = new Scanner(System.in);
+        int option;
+        System.out.println("Please select an option to continue : \n 1. to view or modify Teachers details \n 2. to view or modify Students details");
+        do{
+            option= sc.nextInt();
+            switch (option) {
+                case 1 -> {
+                    System.out.println("Please select an option to continue : \n 1. View Teachers list \n 2. Add a new teacher to the teacher's list \n 3. Remove a teacher from the teacher's list \n 4. To go back to previous menu");
+                if(option==1){
+                }else if(option==2){
+                    System.out.println("Please enter the name of the teacher : ");
+                    String name = sc.next();
+                    addNewTeacher(name);
+                }
+                }else if(option==3) {
+                    
+                }else if(option==4) {
+                }
+                case 2 -> System.out.println("Please select an option to continue : \n 1. View Students list \n 2. Add a new Student to the Student's list \n 3.Remove a Student from the Student's list \n 4. To go back to previous menu");
+                case 3 -> {
+                    System.out.println("________________________________________________________________________");
+                }
+                case 4->{
+                    showMenuFromMainMenu();
+                }
+                default -> System.out.println("Please enter options 1 , 2 or 3");
+            }
+        }while (option != 3);
+    }
+
+    public static void addNewTeacher(String name){
+        Random random = new Random();
+        int id = random.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the salary of the teacher : ");
+        int salary = sc.nextInt();
+        Teacher teacherName = new Teacher(id , name , salary);
+    }
