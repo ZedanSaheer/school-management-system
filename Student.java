@@ -41,7 +41,7 @@ public class Student {
         return grade;
     }
 
-    //return fees paid by the student currently
+    //return total fees paid by the student currently
     public int getFeesPaid() {
         return feesPaid;
     }
@@ -60,6 +60,6 @@ public class Student {
     public String toString() {
         return "Student's Name is : " + name +
                 "\n" + "Total fees paid by " +
-                name + ": $" + feesPaid;
+                name + ": $" + feesPaid + '\n';
     }
 }

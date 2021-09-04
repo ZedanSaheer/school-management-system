@@ -61,6 +61,6 @@ public class School {
 
         @Override
         public String toString() {
-                return  "School's total income : " + totalMoneyEarned;
+                return  "School's total income : " + totalMoneyEarned + "\n" +students + "\n" + teachers;
         }
 }

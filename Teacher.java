@@ -41,6 +41,6 @@ public class Teacher {
     public String toString() {
         return "Teacher's Name is : " + name +
                 "\n" + "Total salary earned by " +
-                name + " : $" + salaryEarned;
+                name + " : $" + salaryEarned + "\n";
     }
 }
