@@ -14,12 +14,12 @@ public class Main {
 
         //manually creating school object with students and teachers till i figure out how to make a function for adding new objects!
 
-        Teacher bhavya = new Teacher(1 ,"bhavya",500);
-        Teacher malika = new Teacher(2 ,"malika",5000);
-        Teacher dhanya = new Teacher(3 ,"dhanya",1000);
-        Student zedan = new Student(1 , "zedan" , 12);
-        Student rushaid = new Student(2 , "rushaid" , 5);
-        Student ruhaim = new Student(3 , "ruhaim" , 10);
+        var bhavya = new Teacher(1 ,"bhavya",500);
+        var malika = new Teacher(2 ,"malika",5000);
+        var dhanya = new Teacher(3 ,"dhanya",1000);
+        var zedan = new Student(1 , "zedan" , 12);
+        var rushaid = new Student(2 , "rushaid" , 5);
+        var ruhaim = new Student(3 , "ruhaim" , 10);
         teacherList.add(malika);
         teacherList.add(dhanya);
         teacherList.add(bhavya);
@@ -27,7 +27,12 @@ public class Main {
         studentList.add(rushaid);
         studentList.add(ruhaim);
 
+
+        School zst = new School(teacherList , studentList);
+
+        //functions to the manually created object function!
     }
+
 
 
     public void toPaySalary(Teacher teacherName , int salary ){

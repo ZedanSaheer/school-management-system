@@ -2,18 +2,16 @@ package schoolManagementSystem;
 
 import java.util.List;
 
-
-
 public class School {
-        private List<Teacher> teachers;
-        private List<Student> students;
+        private static List<Teacher> teachers;
+        private static List<Student> students;
         private static int totalMoneyEarned;
         private static int totalMoneySpent;
 
         //new school object with list of teachers and students as @params
         public School(List<Teacher> teachers, List<Student> students) {
-                this.teachers = teachers;
-                this.students = students;
+                School.teachers = teachers;
+                School.students = students;
                 totalMoneyEarned=0;
                 totalMoneySpent=0;
         }
@@ -21,6 +19,11 @@ public class School {
         //returns the list of teachers in the school
         public List<Teacher> getTeachers() {
                 return teachers;
+        }
+
+        //deletes a teacher
+        public void removeTeacher(Teacher element){
+                teachers.remove(element);
         }
 
         //adds new teacher to the list of teachers
@@ -34,8 +37,13 @@ public class School {
         }
 
         //adds new student to the list of students
-        public void addStudents(Student student) {
+        public static void addStudents(Student student) {
                students.add(student);
+        }
+
+        //deletes a student
+        public static void removeStudent(Student student){
+                students.remove(student);
         }
 
         //the total money earned by the school
